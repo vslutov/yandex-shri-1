@@ -1,6 +1,6 @@
 {
   "name": "@vslutov/yandex-shri-1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Solution for task 1, ShRI Moscow autumn 2019",
   "main": "build/index.js",
   "module": "src/index.js",

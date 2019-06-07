@@ -10,7 +10,7 @@
     "start": "parcel -d .parcel_build src/index.html",
     "build": "parcel build -d build src/script.js src/template-engine.js src/style.css",
     "clean": "rimraf build",
-    "prepublishOnly": "npm install && npm run clean && npm test && npm run build && npm dedupe && npm shrinkwrap",
+    "prepublishOnly": "npm install && npm run clean && npm test && npm run build && npm dedupe && npm shrinkwrap && git add -f build npm-shrinkwrap.json",
     "postversion": "git push --follow-tags"
   },
   "repository": {

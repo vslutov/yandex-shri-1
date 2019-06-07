@@ -2,6 +2,7 @@
 .cache
 build
 .idea/workspace.xml
+npm-shrinkwrap.json
 
 # Logs
 logs

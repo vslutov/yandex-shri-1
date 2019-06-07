@@ -1,12 +1,21 @@
-const getModifierClasses = (prefix, modifiers) => {
-  const addClass = (accumulator, key) => (
+export interface Modifiers {
+  [key: string]: string
+}
+
+export type Classname = string
+export type Classnames = string
+
+const getModifierClasses = (prefix: Classname, modifiers: Modifiers): Classnames => {
+  const addClass = (accumulator: Classnames, key: string): Classnames => (
     `${accumulator} ${prefix}_${key}_${modifiers[key]}`
   )
 
   return Object.keys(modifiers).reduce(addClass, '')
 }
 
-const getBasicClass = (block, args) => {
+type CNArgs = [] | [Classname] | [Modifiers] | [Classname, Modifiers]
+
+const getBasicClass = (block: string, args: CNArgs): Classname => {
   if (args.length === 0 || typeof args[0] !== 'string') {
     return block
   }
@@ -14,7 +23,7 @@ const getBasicClass = (block, args) => {
   return `${block}__${args[0]}`
 }
 
-const getModifiers = (defaultModifiers, args) => {
+const getModifiers = (defaultModifiers: Modifiers, args: CNArgs): Modifiers => {
   // block()
   if (args.length === 0) {
     return defaultModifiers
@@ -35,7 +44,7 @@ const getModifiers = (defaultModifiers, args) => {
   return {}
 }
 
-export const cn = (block, defaultModifiers = {}) => (...args) => {
+export const cn = (block: Classname, defaultModifiers: Modifiers = {}) => (...args: CNArgs) : Classnames => {
   const basicClass = getBasicClass(block, args)
   const modifiers = getModifiers(defaultModifiers, args)
 

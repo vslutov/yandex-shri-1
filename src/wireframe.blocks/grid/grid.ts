@@ -6,7 +6,7 @@ export const gridTemplate = ({
   modifiers = {},
   children = '',
   mixins = ''
-}) => (
+}: TemplateArguments): Html => (
   `<div class="${gridClassname('container', modifiers)} ${mixins}">
     ${children}
   </div>`

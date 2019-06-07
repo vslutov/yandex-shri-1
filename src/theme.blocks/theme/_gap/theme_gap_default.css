@@ -1,0 +1,9 @@
+.theme_gap_default {
+    --gap: var(--space-m);
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+    .theme_gap_default {
+        --gap: var(--space-xxxl);
+    }
+}

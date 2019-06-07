@@ -1,0 +1,6 @@
+.theme_breakpoint_default {
+    --breakpoint-s: 576px;
+    --breakpoint-m: 768px;
+    --breakpoint-l: 992px;
+    --breakpoint-xl: 1144px;
+}

@@ -1,0 +1,5 @@
+@media (min-width: var(--breakpoint-s)) {
+    .grid_s-columns_3 {
+        grid-template-columns: repeat(3, auto);
+    }
+}

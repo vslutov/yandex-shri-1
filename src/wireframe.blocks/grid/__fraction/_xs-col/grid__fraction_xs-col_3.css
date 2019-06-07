@@ -1,0 +1,5 @@
+@media (min-width: var(--breakpoint-m)){
+    .grid__fraction_xs-col_3 {
+        grid-column: auto / span 3;
+    }
+}

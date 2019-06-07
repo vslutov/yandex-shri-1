@@ -6,7 +6,7 @@
   "module": "src/index.js",
   "sideEffects": false,
   "scripts": {
-    "test": "standard",
+    "test": "standard && ava",
     "start": "parcel -d .parcel_build src/index.html",
     "build": "parcel build -d build src/script.js src/template-engine.js src/style.css",
     "clean": "rimraf build",
@@ -24,8 +24,10 @@
   },
   "homepage": "https://github.com/vslutov/yandex-shri-1#readme",
   "devDependencies": {
+    "ava": "^2.0.0",
     "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
+    "esm": "^3.2.25",
     "husky": "^2.4.0",
     "parcel-bundler": "^1.12.3",
     "rimraf": "^2.6.3",
@@ -45,5 +47,10 @@
   "engines": {
     "node": ">=10.15.1",
     "npm": ">=6.4.1"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   }
 }

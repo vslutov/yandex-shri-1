@@ -2,9 +2,16 @@
   "name": "@vslutov/yandex-shri-1",
   "version": "0.0.1",
   "description": "Solution for task 1, ShRI Moscow autumn 2019",
-  "main": "index.js",
+  "main": "build/index.js",
+  "module": "src/index.js",
+  "sideEffects": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard",
+    "start": "parcel -d .parcel_build src/index.html",
+    "build": "parcel build -d build src/script.js src/template-engine.js src/style.css",
+    "clean": "rimraf build",
+    "prepublishOnly": "npm install && npm run clean && npm test && npm run build && npm dedupe && npm shrinkwrap",
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,28 @@
   "bugs": {
     "url": "https://github.com/vslutov/yandex-shri-1/issues"
   },
-  "homepage": "https://github.com/vslutov/yandex-shri-1#readme"
+  "homepage": "https://github.com/vslutov/yandex-shri-1#readme",
+  "devDependencies": {
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^2.4.0",
+    "parcel-bundler": "^1.12.3",
+    "rimraf": "^2.6.3",
+    "standard": "^12.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
+  "engines": {
+    "node": ">=10.15.1",
+    "npm": ">=6.4.1"
+  }
 }

@@ -1,0 +1,12 @@
+.theme_color_project-default {
+    /* Background color is used in nested elements */
+    --background-color: #FFF;
+    --background-border-color: #000;
+    --background-accent-color: #0056B3;
+
+    /* Text color is used in nested elements */
+    --text-color: #000;
+    --text-secondary-color: rgba(0, 0, 0, 0.6);
+    --text-additional-color: rgba(0, 0, 0, 0.3);
+    --text-link-color: rgba(0, 0, 0, 0.3);
+}

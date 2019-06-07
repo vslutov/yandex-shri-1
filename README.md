@@ -1,2 +1,3 @@
 # yandex-shri-1
-Решение Задания 1 — ШРИ, Москва, осень 2019
+
+Solution for task 1, ShRI Moscow autumn 2019

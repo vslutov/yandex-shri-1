@@ -4,7 +4,7 @@
   "description": "Solution for task 1, ShRI Moscow autumn 2019",
   "main": "build/index.js",
   "scripts": {
-    "test": "standard src/**/*.ts && ava",
+    "test": "standardx src/**/*.ts && ava",
     "start": "parcel -d .parcel_build src/index.html",
     "build": "parcel build -d build src/script.ts src/template-engine.ts src/style.css",
     "clean": "rimraf build",
@@ -31,7 +31,7 @@
     "husky": "^2.4.0",
     "parcel-bundler": "^1.12.3",
     "rimraf": "^2.6.3",
-    "standard": "^12.0.1",
+    "standardx": "^3.0.1",
     "ts-node": "^8.2.0",
     "typescript": "^3.4.5"
   },
@@ -59,10 +59,20 @@
       "ts-node/register"
     ]
   },
-  "standard": {
+  "standardx": {
     "parser": "@typescript-eslint/parser",
     "plugins": [
       "@typescript-eslint/eslint-plugin"
     ]
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  },
+  "dependencies": {
+    "bem-xjst": "^8.9.5",
+    "ramda": "^0.26.1"
   }
 }

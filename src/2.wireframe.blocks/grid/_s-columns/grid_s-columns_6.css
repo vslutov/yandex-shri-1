@@ -1,4 +1,4 @@
-@media (min-width: var(--breakpoint-s)) {
+@media (min-width: 576px) and (max-width: 1144px) {
     .grid_s-columns_6 {
         grid-template-columns: repeat(6, auto);
     }

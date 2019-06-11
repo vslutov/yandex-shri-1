@@ -1,0 +1,6 @@
+.card__content {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}

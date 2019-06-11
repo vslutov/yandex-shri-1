@@ -1,3 +1,13 @@
+/* Этот файл используется в ознакомительных целях,
+   так как css переменные нельзя использовать
+   в медиа-выражениях.
+
+   Так написать **нельзя**:
+   @media (min-width: var(--breakpoint-m))
+
+   А так можно:
+   @media (min-width: 1144px)
+ */
 .theme_breakpoint_default {
     --breakpoint-s: 576px;
     --breakpoint-m: 1144px;

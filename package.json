@@ -29,11 +29,14 @@
     "cz-conventional-changelog": "^2.1.0",
     "esm": "^3.2.25",
     "husky": "^2.4.0",
+    "mz": "^2.7.0",
     "parcel-bundler": "^1.12.3",
     "rimraf": "^2.6.3",
     "standardx": "^3.0.1",
     "ts-node": "^8.2.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "yeoman-generator": "^4.0.1",
+    "yo": "^2.0.6"
   },
   "config": {
     "commitizen": {
@@ -63,6 +66,9 @@
     "parser": "@typescript-eslint/parser",
     "plugins": [
       "@typescript-eslint/eslint-plugin"
+    ],
+    "ignore": [
+      "generator-component/generators/app/templates/*"
     ]
   },
   "eslintConfig": {

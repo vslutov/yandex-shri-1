@@ -1,8 +1,10 @@
-.theme_gap_default {
-    --gap: var(--space-m);
+@media (max-width: 1144px) {
+    .theme_gap_default {
+        --gap: var(--space-m);
+    }
 }
 
-@media (min-width: var(--breakpoint-m)) {
+@media (min-width: 1144px) {
     .theme_gap_default {
         --gap: var(--space-xxxl);
     }

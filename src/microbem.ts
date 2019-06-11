@@ -271,6 +271,7 @@ export const applyBody = (body: Body, entity: BemEntity): HtmlParam => {
     elemMods,
     bem
   }
+
   const bemClasses: Cls = [bemElem].concat(mix).map(getBemClassname).join(' ')
 
   const cls = [body.cls || entity.cls, bemClasses].filter(isNotNil).join(' ')

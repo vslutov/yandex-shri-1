@@ -1,4 +1,4 @@
-@media (min-width: var(--breakpoint-m)){
+@media (min-width: 1144px){
     .grid__fraction_m-col_5 {
         grid-column: auto / span 5;
     }

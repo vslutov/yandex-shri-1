@@ -1,13 +1,13 @@
 .theme_size_default {
-    --text-size-s: 7px;
-    --text-size-m: 8px;
-    --text-size-l: 10px;
-    --text-size-xl: 11px;
-    --text-size-xxl: 13px;
+    --size-text-s: 7px;
+    --size-text-m: 8px;
+    --size-text-l: 10px;
+    --size-text-xl: 11px;
+    --size-text-xxl: 13px;
 
-    --text-interval-s: 18px;
-    --text-interval-m: 21px;
-    --text-interval-l: 25px;
-    --text-interval-xl: 28px;
-    --text-interval-xxl: 34px;
+    --interval-text-s: 18px;
+    --interval-text-m: 21px;
+    --interval-text-l: 25px;
+    --interval-text-xl: 28px;
+    --interval-text-xxl: 34px;
 }

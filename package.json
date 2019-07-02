@@ -31,6 +31,7 @@
     "husky": "^2.4.0",
     "mz": "^2.7.0",
     "parcel-bundler": "^1.12.3",
+    "ramda": "^0.26.1",
     "rimraf": "^2.6.3",
     "standardx": "^3.0.1",
     "ts-node": "^8.2.0",
@@ -76,9 +77,5 @@
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error"
     }
-  },
-  "dependencies": {
-    "bem-xjst": "^8.9.5",
-    "ramda": "^0.26.1"
   }
 }

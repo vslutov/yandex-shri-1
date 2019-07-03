@@ -1,0 +1,118 @@
+block: theme
+mods:
+  color: project-default
+  space: default
+  size: default
+  gap: small
+content:
+  block: layout
+  content:
+    block: layout
+    elem: container
+    elemMods:
+      size: m
+      align: center
+    content:
+      block: grid
+      mods:
+        m-columns: 10
+        col-gap: half
+        row-gap: half
+      content:
+      -
+        block: card
+        mods:
+          border: all
+        content:
+          -
+            elem: content
+            elemMods:
+              distribute: center
+              vertical-align: center
+            content: Bem
+          -
+            elem: footer
+            elemMods:
+              distribute: center
+              space-a: m
+            content: footnote
+        mix:
+          -
+            block: grid
+            elem: fraction
+            elemMods:
+              m-col: 5
+      -
+        block: form
+        mods:
+          border: all
+        mix:
+          -
+            block: grid
+            elem: fraction
+            elemMods:
+              m-col: 5
+        content:
+          -
+            elem: item
+            content: Header
+            mix:
+              -
+                elem: header
+          -
+            elem: item
+            mix:
+              -
+                elem: content
+            content:
+              -
+                elem: item
+                mix:
+                  -
+                    elem: content-item
+                content:
+                  -
+                    elem: label
+                    elemMods:
+                      width: default
+                    content: Label 1
+                  -
+                    elem: control
+                    content: Control 1
+              -
+                elem: item
+                mix:
+                  -
+                    elem: content-item
+                content:
+                  -
+                    elem: label
+                    elemMods:
+                      width: default
+                    content: Label 2
+                  -
+                    elem: control
+                    content: Control 2
+          -
+            elem: item
+            mix:
+              -
+                elem: footer
+            content: Footer
+      - &card
+        block: card
+        mods:
+          border: all
+        content: card
+      - *card
+      - *card
+      - *card
+      - *card
+      - *card
+      - *card
+      - *card
+      - *card
+      - *card
+      - *card
+      - *card
+      - *card

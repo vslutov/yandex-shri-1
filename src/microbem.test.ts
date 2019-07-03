@@ -85,6 +85,7 @@ test('register body', t => {
   // @ts-ignore
   t.deepEqual(t.context.templates, [{
     body: {
+      mix: undefined
     },
     predicate: {
       block: 'cat',

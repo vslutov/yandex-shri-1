@@ -1,5 +1,0 @@
-@media (min-width: 576px) and (max-width: 1144px) {
-    .grid_s-columns_3 {
-        grid-template-columns: repeat(3, auto);
-    }
-}

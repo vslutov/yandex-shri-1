@@ -8,7 +8,7 @@ module.exports = class extends Generator {
     this.argument('level', { type: String, required: true })
     this.argument('block', { type: String, required: true })
     this.argument('mod', { type: String, required: true })
-    this.argument('values', { type: String, required: true })
+    this.argument('values', { type: Array, required: true })
   }
 
   writing () {

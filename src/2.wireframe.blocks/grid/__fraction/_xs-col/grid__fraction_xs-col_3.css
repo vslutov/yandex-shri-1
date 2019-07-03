@@ -1,5 +1,0 @@
-@media (max-width: 1144px) {
-    .grid__fraction_xs-col_3 {
-        grid-column: auto / span 3;
-    }
-}

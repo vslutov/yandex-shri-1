@@ -25,7 +25,7 @@ type Mods = { [key: string]: ModValue }
 type Attrs = { [key: string]: AttrValue }
 
 interface BaseBemEntity {
-    block: BlockName
+    block?: BlockName
     elem?: ElemName
     mods?: Mods
     elemMods?: Mods
@@ -137,6 +137,11 @@ export class Block extends ExtensibleFunction {
 
     constructor (block: BlockName, templates: Template[]) {
       super((body: Body): void => {
+        body = {
+          ...body,
+          mix: body.mix != null ? body.mix.map((x: BaseBemEntity) : BaseBemEntity => ({ ...x, block: x.block || block })) : undefined
+        }
+
         templates.push({
           predicate: this.predicate,
           body
@@ -247,7 +252,7 @@ const mergeBem = <T>(bodyInit: T, bodyAdd: T, entity: T): T => (
   )
 )
 
-export const applyBody = (body: Body, entity: BemEntity): HtmlParam => {
+export const applyBody = (body: Body, entity: BemEntity, parentBlock?: BlockName): HtmlParam => {
   const tag = mergeTag(body.tag, entity.tag)
 
   const attrs = mergeBem(body.attrs, body.addAttrs, entity.attrs)
@@ -261,11 +266,14 @@ export const applyBody = (body: Body, entity: BemEntity): HtmlParam => {
   const mods = mergeBem(body.mods, body.addMods, entity.mods)
   const elemMods = mergeBem(body.elemMods, body.addElemMods, entity.elemMods)
 
-  const mix: Mix = (body.mix || entity.mix || []).concat(body.addMix).filter(isNotNil)
+  const block = entity.block || parentBlock
+  const mix: Mix = (body.mix || entity.mix || []).concat(body.addMix)
+    .filter(isNotNil)
+    .map((x: BaseBemEntity) : BaseBemEntity => ({ ...x, block: x.block || block }))
 
   const bem = body.bem != null ? body.bem : entity.bem
   const bemElem: BaseBemEntity = {
-    block: entity.block,
+    block,
     elem: entity.elem,
     mods,
     elemMods,
@@ -372,11 +380,16 @@ export const compile = (register: Register): Render => {
   register(block)
 
   // Convert entity to an array of bodies: extract mixes and find bodies
-  const getBodies = (entity: BemEntity): Body[] => (
-    templates.filter(t => accept(t.predicate, entity)).map(t => t.body)
-  )
+  const getBodies = (entity: BemEntity, parentBlock?: BlockName): Body[] => {
+    entity = {
+      ...entity,
+      block: entity.block || parentBlock
+    }
 
-  const render = (bemJson: BemJson): Html => {
+    return templates.filter(t => accept(t.predicate, entity)).map(t => t.body)
+  }
+
+  const render = (bemJson: BemJson, parentBlock?: BlockName): Html => {
     if (bemJson == null) {
       return ''
     }
@@ -386,12 +399,13 @@ export const compile = (register: Register): Render => {
     }
 
     if (Array.isArray(bemJson)) {
-      return <Html>bemJson.reduce((acc, elem) => `${acc}${render(elem)}`, '')
+      return <Html>bemJson.reduce((acc, elem) => `${acc}${render(elem, parentBlock)}`, '')
     }
 
-    let htmlParam: HtmlParam = applyBody(getBodies(bemJson).reduce(mergeBodies, {}), bemJson)
+    const htmlParam: HtmlParam = applyBody(getBodies(bemJson, parentBlock).reduce(mergeBodies, {}), bemJson, parentBlock)
+    const block = bemJson.block || parentBlock
 
-    const content: Html = render(htmlParam.content)
+    const content: Html = render(htmlParam.content, block)
     return renderToString(htmlParam, content)
   }
 

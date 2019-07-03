@@ -1,5 +1,5 @@
 /* Breakpoint: 1144px */
 
-.theme * {
+.theme,.theme * {
     box-sizing: border-box;
 }

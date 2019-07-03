@@ -1,0 +1,35 @@
+.text_view_primary .text__word {
+  background-color: var(--color-text);
+}
+
+.text_view_secondary .text__word {
+  background-color: var(--color-text-secondary);
+}
+
+.text_view_ghost .text__word {
+  background-color: var(--color-text-additional);
+}
+
+.text_view_link .text__word {
+  background-color: var(--color-text-link);
+}
+
+.text_size_s .text__word {
+  height: 7px;
+}
+
+.text_size_m .text__word {
+  height: 8px;
+}
+
+.text_size_l .text__word {
+  height: 10px;
+}
+
+.text_size_xl .text__word {
+  height: 11px;
+}
+
+.text_size_xxl .text__word {
+  height: 13px;
+}

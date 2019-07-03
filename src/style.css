@@ -127,3 +127,13 @@
 @import "./3.patterns.blocks/list/_view/list_view_default.css";
 @import "./3.patterns.blocks/list/list.css";
 @import "./3.patterns.blocks/list/_border/list_border_all.css";
+@import "./4.content.blocks/text/_type/text_type_h3.css";
+@import "./4.content.blocks/text/_type/text_type_p.css";
+@import "./4.content.blocks/text/_type/text_type_h1.css";
+@import "./4.content.blocks/text/_type/text_type_h2.css";
+@import "./4.content.blocks/text/text.css";
+@import "./4.content.blocks/text/_align/text_align_center.css";
+@import "./4.content.blocks/text/__word/text__word.css";
+@import "./4.content.blocks/text/__word/_width/text__word_width_s.css";
+@import "./4.content.blocks/text/__word/_width/text__word_width_m.css";
+@import "./4.content.blocks/text/__word/_width/text__word_width_l.css";

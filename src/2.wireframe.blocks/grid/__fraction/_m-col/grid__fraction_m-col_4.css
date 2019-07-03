@@ -1,5 +1,5 @@
 @media (min-width: 1144px){
-    .grid__fraction_m-col_3 {
-        grid-column: auto / span 3;
+    .grid__fraction_m-col_4 {
+        grid-column: auto / span 4;
     }
 }

@@ -1,5 +1,5 @@
 @media (min-width: 1144px) {
     .grid_m-columns_12 {
-        grid-template-columns: repeat(12, auto);
+        grid-template-columns: repeat(12, 1fr);
     }
 }

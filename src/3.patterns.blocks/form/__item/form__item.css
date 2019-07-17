@@ -1,3 +1,9 @@
 .form__item {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.form__item:last-of-type {
+  border: 0;
 }

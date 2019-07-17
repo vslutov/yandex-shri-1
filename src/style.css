@@ -165,3 +165,5 @@
 @import "./4.content.blocks/brand-logo/_name/brand-logo_name_megafon.css";
 @import "./4.content.blocks/brand-logo/_name/brand-logo_name_yota.css";
 @import "./4.content.blocks/brand-logo/_name/brand-logo_name_kcell.css";
+@import "./5.complex.blocks/payment/__header/payment__header.css";
+@import "./5.complex.blocks/payment/payment.css";

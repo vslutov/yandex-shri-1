@@ -69,7 +69,9 @@
       "@typescript-eslint/eslint-plugin"
     ],
     "ignore": [
-      "generator-component/generators/app/templates/*"
+      "generator-ts/generators/block/templates/*",
+      "generator-ts/generators/elem/templates/*",
+      "src/template-engine.ts"
     ]
   },
   "eslintConfig": {

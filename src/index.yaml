@@ -21,21 +21,13 @@ content:
             m-columns: 10
             col-gap: full
           content:
-          - block: card
-            mods:
-              border: all
+          - block: payment
             mix:
               -
                 block: grid
                 elem: fraction
                 elemMods:
                   m-col: 5
-            content:
-              - elem: content
-                elemMods:
-                  space-a: m
-                content:
-                  - block: image
           - block: card
             mods:
               border: all

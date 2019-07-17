@@ -1,5 +1,10 @@
 /* Breakpoint: 1144px */
 
 .theme,.theme * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* FIXME: is it needed? */
+body {
+  margin: 0;
 }

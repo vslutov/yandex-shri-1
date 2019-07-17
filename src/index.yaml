@@ -12,70 +12,106 @@ content:
       size: m
       align: center
     content:
-    - block: grid
+    - block: section
       mods:
-        m-columns: 10
-        col-gap: half
-        row-gap: half
+        indent-b: xxl
       content:
-      - block: card
-        mods:
-          border: all
-        mix:
-          -
-            block: grid
-            elem: fraction
-            elemMods:
-              m-col: 5
-        content: Form
-      - block: card
-        mods:
-          border: all
-        mix:
-          -
-            block: grid
-            elem: fraction
-            elemMods:
-              m-col: 5
-        content: Warning
-      - &product
-        block: card
-        mods:
-          border: all
-        mix:
-          -
-            block: grid
-            elem: fraction
-            elemMods:
-              m-col: 2
-        content: Product
-      - *product
-      - *product
-      - *product
-      - *product
-    - block: grid
+        - block: grid
+          mods:
+            m-columns: 10
+            col-gap: full
+          content:
+          - block: card
+            mods:
+              border: all
+            mix:
+              -
+                block: grid
+                elem: fraction
+                elemMods:
+                  m-col: 5
+            content:
+              - elem: content
+                elemMods:
+                  space-a: m
+                content:
+                  - block: image
+          - block: card
+            mods:
+              border: all
+            mix:
+              -
+                block: grid
+                elem: fraction
+                elemMods:
+                  m-col: 5
+            content: Warning
+    - block: section
       mods:
-        m-columns: 12
-        col-gap: half
-        row-gap: half
+        indent-b: xxl
       content:
-        - block: card
+        - block: grid
           mods:
-            border: all
-          mix:
-            -
-              block: grid
-              elem: fraction
-              elemMods:
-                m-col: 8
-          content: List
-        - block: card
+            m-columns: 10
+            col-gap: half
+          content:
+            - &product
+              block: card
+              mods:
+                border: all
+              mix:
+                -
+                  block: grid
+                  elem: fraction
+                  elemMods:
+                    m-col: 2
+              content:
+                - elem: content
+                  elemMods:
+                    space-a: m
+                  content: Product
+            - *product
+            - *product
+            - *product
+            - *product
+    - block: section
+      mods:
+        indent-b: xxl
+      content:
+        - block: grid
           mods:
-            border: all
-          mix:
-            -
-              block: grid
-              elem: fraction
-              elemMods:
-                m-col: 4
-          content: Primary
+            m-columns: 12
+            col-gap: full
+          content:
+            - block: card
+              mods:
+                border: all
+              mix:
+                -
+                  block: grid
+                  elem: fraction
+                  elemMods:
+                    m-col: 8
+              content: List
+            - block: card
+              mods:
+                border: all
+              mix:
+                -
+                  block: grid
+                  elem: fraction
+                  elemMods:
+                    m-col: 4
+              content:
+                - block: text
+                  mods:
+                    size: m
+                    type: p
+                    view: primary
+                  content:
+                    - elem: word
+                      elemMods:
+                        width: l
+                    - elem: word
+                      elemMods:
+                        width: m

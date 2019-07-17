@@ -15,21 +15,30 @@
 }
 
 .text_size_s .text__word {
-  height: 7px;
+  height: var(--size-text-s);
+  margin-bottom: var(--interval-text-s);
 }
 
 .text_size_m .text__word {
-  height: 8px;
+  height: var(--size-text-m);
+  margin-bottom: var(--interval-text-m);
 }
 
 .text_size_l .text__word {
-  height: 10px;
+  height: var(--size-text-l);
+  margin-bottom: var(--interval-text-l);
 }
 
 .text_size_xl .text__word {
-  height: 11px;
+  height: var(--size-text-xl);
+  margin-bottom: var(--interval-text-xl);
 }
 
 .text_size_xxl .text__word {
-  height: 13px;
+  height: var(--size-text-xxl);
+  margin-bottom: var(--interval-text-xxl);
+}
+
+.text__word:last-of-type {
+  margin-bottom: 0;
 }

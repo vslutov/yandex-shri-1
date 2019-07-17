@@ -1,0 +1,18 @@
+.image {
+  width: 100%;
+  padding-bottom: calc(80% - 6px);
+  border: var(--color-background-border) 3px solid;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: top;
+}
+
+.theme_color_project-default .image {
+  background-image: url(default.svg);
+}
+
+.theme_color_project-inverse .image, .theme_color_project-brand .image {
+  background-image: url(inverse.svg);
+}
+

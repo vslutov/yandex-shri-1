@@ -1,0 +1,3 @@
+.text_size_xl {
+  margin-top: calc(-1 * var(--interval-text-xl));
+}

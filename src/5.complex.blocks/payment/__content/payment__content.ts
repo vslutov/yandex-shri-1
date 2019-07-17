@@ -1,4 +1,4 @@
-import { BlockCreator, Body, BemJson } from '../../../microbem'
+import { BlockCreator, Body } from '../../../microbem'
 
 export default (block: BlockCreator) => {
   const body: Body = {

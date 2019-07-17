@@ -28,16 +28,13 @@ content:
                 elem: fraction
                 elemMods:
                   m-col: 5
-          - block: card
-            mods:
-              border: all
+          - block: warning
             mix:
               -
                 block: grid
                 elem: fraction
                 elemMods:
                   m-col: 5
-            content: Warning
     - block: section
       mods:
         indent-b: xxl

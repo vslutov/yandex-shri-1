@@ -1,0 +1,3 @@
+.text_size_s {
+  margin-top: calc(-1 * var(--interval-text-s));
+}

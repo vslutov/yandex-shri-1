@@ -1,3 +1,4 @@
 .informer__content_distribute_center {
-  justify-content: center;
+  align-items: center;
+  align-content: center;
 }

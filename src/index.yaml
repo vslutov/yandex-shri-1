@@ -45,20 +45,13 @@ content:
             col-gap: half
           content:
             - &product
-              block: card
-              mods:
-                border: all
+              block: product
               mix:
                 -
                   block: grid
                   elem: fraction
                   elemMods:
                     m-col: 2
-              content:
-                - elem: content
-                  elemMods:
-                    space-a: m
-                  content: Product
             - *product
             - *product
             - *product
